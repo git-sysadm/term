@@ -6,7 +6,7 @@ FILES='3024_Day 3024_Night Abernathy Adventure AdventureTime Afterglow Alabaster
 CFLE='.termclr'
 URL='https://raw.githubusercontent.com/git-sysadm/term/color/dynamic-colors'
 INP="$(echo "$1"|tr "[:upper:]" "[:lower:]")"
-LIST="$(echo "${FILES}"|sed -z 's/ /\n/g'| grep "${INP}")"
+LIST="$(echo "${FILES}"|sed -z 's/ /\n/g'| grep -i "${INP}")"
 if [ -z "${LIST}" ]
 then
 echo "Input value does not have any match color scheme"
