@@ -22,7 +22,7 @@ read -p " Select color scheme from above list by entering any one number: " SNUM
 CLR="$(echo "${LIST}"|sed -n "${SNUM} p")"
 echo "You have selected color shceme ${CLR} for this terminal"
 FLNK="${URL}/${CLR}.sh"
-curl -kso ${CFLE} "${FLNK}" 2> /dev/null || wget wget --no-check-certificate -qO ${CFLE} "${FLNK}" 
+curl -kso ${CFLE} "${FLNK}" 2> /dev/null || wget --no-check-certificate -qO ${CFLE} "${FLNK}" 
 chmod +x ${CFLE} && ./${CFLE} 
 CHKCLR="$(grep 'COLOR_SCHEME_termclr' ~/.bashrc)"
 if [ -z "${CHKCLR}" ]
